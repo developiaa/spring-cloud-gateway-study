@@ -22,6 +22,8 @@ dependencies {
     // m1 mac에서 실행안되는 현상
     implementation 'io.netty:netty-resolver-dns-native-macos:4.1.77.Final:osx-aarch_64'
     implementation 'org.projectlombok:lombok:1.18.20'
+    // https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt
+    implementation group: 'io.jsonwebtoken', name: 'jjwt', version: '0.9.1'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
