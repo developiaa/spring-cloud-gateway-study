@@ -1,7 +1,6 @@
 package study.developia.gateway.filter;
 
 import io.jsonwebtoken.Jwts;
-import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.http.HttpHeaders;
 import org.springframework.cloud.gateway.filter.GatewayFilter;
@@ -16,10 +15,18 @@ import reactor.core.publisher.Mono;
 
 @Component
 @Slf4j
-@RequiredArgsConstructor
 public class AuthorizationHeaderFilter extends AbstractGatewayFilterFactory<AuthorizationHeaderFilter.Config> {
 
     private final Environment environment;
+
+    public AuthorizationHeaderFilter(Environment environment) {
+        super(Config.class);
+        this.environment = environment;
+    }
+
+    public static class Config {
+        // Put Configuration properties here
+    }
 
     //login > token > users (with token) > header(include token)
     @Override
@@ -72,9 +79,6 @@ public class AuthorizationHeaderFilter extends AbstractGatewayFilterFactory<Auth
         return response.setComplete();
     }
 
-    public static class Config {
-
-    }
 
 
 }

@@ -24,6 +24,15 @@ dependencies {
     implementation 'org.projectlombok:lombok:1.18.20'
     // https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt
     implementation group: 'io.jsonwebtoken', name: 'jjwt', version: '0.9.1'
+
+    /**
+     * jwt javax/xml/bind/DatatypeConverter error 발생시 추가
+     * jdk 11에서는 관련 모듈이 추가되지 않았기 때문에 추가해주어야함
+     */
+
+    // https://mvnrepository.com/artifact/org.glassfish.jaxb/jaxb-runtime
+    implementation group: 'org.glassfish.jaxb', name: 'jaxb-runtime', version: '4.0.0'
+
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
