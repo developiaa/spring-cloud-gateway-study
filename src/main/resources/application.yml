@@ -93,8 +93,9 @@ spring:
                 preLogger: true
                 postLogger: true
 
-token:
-  secret: user_token_secret
+# config-service에서 가져옴
+#token:
+#  secret: user_token_secret
 
 # actuator info
 management:
