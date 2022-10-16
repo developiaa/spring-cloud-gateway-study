@@ -25,6 +25,8 @@ dependencies {
     // https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt
     implementation group: 'io.jsonwebtoken', name: 'jjwt', version: '0.9.1'
 
+    implementation group: 'io.micrometer', name: 'micrometer-registry-prometheus'
+
     /**
      * jwt javax/xml/bind/DatatypeConverter error 발생시 추가
      * jdk 11에서는 관련 모듈이 추가되지 않았기 때문에 추가해주어야함
